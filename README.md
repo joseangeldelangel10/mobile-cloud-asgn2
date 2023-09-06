@@ -200,3 +200,17 @@ official grade.
 ```        
 `
 
+## Assignment Solution Usage
+
+Getting an authorization token:
+
+```bash
+curl http://localhost:8080/oauth/token -i \
+    -X POST \
+    -H "Content-Type: multipart/form-data" \
+    -F "username=admin" \
+    -F "password=pass" \
+    -F "client_id=mobile" \
+    -F "client_secret=" \
+    -F "grant_type=password" \
+```
