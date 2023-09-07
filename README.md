@@ -214,3 +214,36 @@ curl http://localhost:8080/oauth/token -i \
     -F "client_secret=" \
     -F "grant_type=password" \
 ```
+
+post video data
+
+```bash
+curl http://localhost:8080/video -i \
+    -X POST \
+    -H "Authorization: Bearer c8aa9927-2b33-4f13-a88e-6c5ed4f0b39c" \
+    -H "Content-Type: application/json" \
+    -d @client_request_data.json \
+```
+
+get list of videos
+
+```bash
+curl http://localhost:8080/video -i \
+    -X GET \
+    -H "Authorization: Bearer 8546a80f-59e7-4dff-a0e7-9901f84e3135" \
+```
+
+get video data
+
+```bash
+curl http://localhost:8080/video/1 -i \
+    -X GET \
+    -H "Authorization: Bearer 8546a80f-59e7-4dff-a0e7-9901f84e3135" \
+```
+like a video
+
+```bash
+curl http://localhost:8080/video/1/like -i \
+    -X POST \
+    -H "Authorization: Bearer 8546a80f-59e7-4dff-a0e7-9901f84e3135" \
+```
